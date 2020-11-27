@@ -1,0 +1,34 @@
+[environment & setup]
+1. nodejs.org
+2. git-scm.com
+3. getpostman.com
+4. chorme Extensions 
+- Redux DevTools
+- React Developer Tools
+5. visual studio code Extensions
+- Bracket Pair colorizer
+- ES7 React/ Redux / GraphQL / React-Native snippets
+- Prettier : Code formatter
+- setting -> format on save -> check the box
+6. integrated terminal
+
+
+*Link To Project Files 
+https://github.com/bradtraversy/devconnector_2.0
+
+[Join the website]
+1.mongodb.com
+2.https://mongoosejs.com/
+
+[terminal : bash]
+1.git init
+2.npm init
+4.npm i express
+5.npm i express-validator bcryptjs config gravatar jsonwebtoken mongoose request 
+6.npm i -D nodemon concurrently
+
+7.npm run server
+---------------------------
+8. git add .
+9. git commit -m 'Initial commit'
+------------------------------
