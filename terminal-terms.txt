@@ -32,3 +32,7 @@ https://github.com/bradtraversy/devconnector_2.0
 8. git add .
 9. git commit -m 'Initial commit'
 ------------------------------
+
+[reference]
+express-validator https://express-validator.github.io/docs/
+jsonwebtoken http://jwt.io
