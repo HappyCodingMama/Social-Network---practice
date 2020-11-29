@@ -1,4 +1,6 @@
 {
       "mongoURI":"mongodb+srv://happycodingmama:diddl830@devconnector.bmexl.mongodb.net/mernsns?retryWrites=true&w=majority",
-      "jwtSecret":"mysecrettoken"
+      "jwtSecret":"mysecrettoken",
+      "githubClientId":"1b41e9066da02fb5d18c",
+      "githubSecret":"de395b6717a403201c3b721537b09946b55f9a58"
 }
