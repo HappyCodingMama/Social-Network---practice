@@ -1,0 +1,7 @@
+[environment & setup]
+VSC Extensions
+- Live Sass Compiler
+
+
+
+language: scss html css
