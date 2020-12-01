@@ -1,0 +1,47 @@
+$primary-color: #4668ff;
+$dark-color: #111111;
+$light-color: #f4f4f4;
+$danger-color: #d33a61;
+$success-color: #0cbedd;
+$hover-color: #7e46ff;
+$max-width: 1100px;
+
+//Set text color based on background
+@function set-text-color($color) {
+  @if (lightness($color) > 60) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+
+//set background & text color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+//Margin & Padding
+$spaceamounts: (1, 2, 3, 4, 5);
+
+@each $space in $spaceamounts {
+  // All around margin
+  .m-#{$space} {
+    margin: #{space}rem;
+  }
+
+  //vertical Margin
+  .my-#{$space} {
+    margin: #{space}rem 0;
+  }
+
+  // All around Padding
+  .p-#{$space} {
+    padding: #{space}rem;
+  }
+
+  //vertical Padding
+  .py-#{$space} {
+    padding: #{space}rem 0;
+  }
+}
