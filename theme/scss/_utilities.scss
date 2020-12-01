@@ -25,6 +25,7 @@
   font-size: 1.5rem;
   line-height: 1;
   margin-bottom: 1rem;
+  opacity: 0.9;
 }
 
 .small {
@@ -32,8 +33,18 @@
   margin-bottom: 1rem;
 }
 
+.text-small {
+  font-size: 0.7rem;
+  color: $light-color;
+}
+
 .text-primary {
   color: $primary-color;
+}
+
+.round-img {
+  border-radius: 2%;
+  border: 1px solid lighten($dark-color, 20%);
 }
 
 //Backgrounds
@@ -43,7 +54,7 @@
   }
   &-light {
     @include set-background($light-color);
-    border: #ccc 1px solid;
+    border: lighten($dark-color, 20%) 1px solid;
   }
   &-dark {
     @include set-background($dark-color);
@@ -70,9 +81,11 @@
   border: 2.6px solid $light-color;
   border-radius: 2rem;
   cursor: pointer;
+  font-family: 'Quicksand', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   margin-right: 0.5rem;
+  margin-bottom: 0.3rem;
   outline: none;
   transition: all 0.1s ease-in;
 
@@ -80,11 +93,26 @@
     // @include set-background($primary-color);
     border: 2.6px solid $primary-color;
     color: $primary-color;
+    background-color: transparent;
     &:hover {
       background: lighten($dark-color, 5%);
       border: 2.6px solid $light-color;
     }
   }
+
+  &.btn-small {
+    // @include set-background($primary-color);
+    border: none;
+    color: $primary-color;
+    background-color: transparent;
+    font-size: 0.8rem;
+    padding: 0;
+    &:hover {
+      border: none;
+      background-color: transparent;
+    }
+  }
+
   &.btn-dark {
     @include set-background($dark-color);
     &:hover {
@@ -116,7 +144,10 @@
   margin: 1rem;
   opacity: 0.9;
   background: $light-color;
+  border-radius: 0.2rem;
   color: #333;
+  font-style: italic;
+  text-align: center;
 
   &.alert-primary {
     @include set-background($primary-color);

@@ -1,11 +1,11 @@
 .form {
   &-group {
-    margin: 1.2rem 0;
+    margin: 0.8rem 0;
   }
   &-text {
     display: block;
     margin-top: 0.3rem;
-    color: #888;
+    color: lighten($dark-color, 40%);
   }
 
   input[type='text'],
@@ -17,7 +17,16 @@
     display: block;
     width: 100%;
     padding: 0.4rem;
+    font-family: 'Quicksand', sans-serif;
     font-size: 1.2rem;
-    border: 1px solid #ccc;
+    color: #fff;
+    border: 1px solid lighten($dark-color, 20%);
+    border-radius: 0.2rem;
+    background-color: transparent;
+    outline: none;
+  }
+
+  .my-1 {
+    color: lighten($dark-color, 40%);
   }
 }
