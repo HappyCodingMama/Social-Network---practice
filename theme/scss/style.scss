@@ -106,3 +106,12 @@ h2 {
   color: $light-color;
   background-color: transparent;
 }
+
+//Profile Page
+.profile-grid {
+  display: grid;
+  grid-template-areas:
+  'top top'
+  'about about'
+  'exp edu'
+}
