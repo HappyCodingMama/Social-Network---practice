@@ -1,11 +1,11 @@
-@import 'config';
-@import 'utilities';
-@import 'form';
+@import "config";
+@import "utilities";
+@import "form";
 
 //title & logo
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,700&display=swap");
 //basic font
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.6;
@@ -36,13 +36,13 @@ img {
 }
 
 h1 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-style: italic;
 }
 
 h2 {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 500;
   font-style: italic;
 }
@@ -78,7 +78,7 @@ h2 {
 //Landing
 .landing {
   position: relative;
-  background: url('../img/showcase.jpg') no-repeat center center/cover;
+  background: url("../img/showcase.jpg") no-repeat center center/cover;
   height: 100vh;
 
   &-inner {
@@ -110,8 +110,35 @@ h2 {
 //Profile Page
 .profile-grid {
   display: grid;
-  grid-template-areas:
-  'top top'
-  'about about'
-  'exp edu'
+  grid-template-areas: "top top" "about about" "exp edu", "github github";
+  grid-gap: 1rem;
+
+  .profile-top {
+    grid-area: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    img {
+      width: 250px;
+    }
+  }
+
+  .profile-about {
+    grid-area: about;
+  }
+
+  .profile-exp {
+    grid-area: exp;
+  }
+
+  .profile-edu {
+    grid-area: edu;
+  }
+
+  .profile-github {
+    grid-area: github;
+  }
 }
