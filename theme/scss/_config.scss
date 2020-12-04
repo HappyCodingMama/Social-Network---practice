@@ -8,7 +8,7 @@ $max-width: 1100px;
 
 //Set text color based on background
 @function set-text-color($color) {
-  @if (lightness($color) > 60) {
+  @if (lightness($color) > 64) {
     @return #333;
   } @else {
     @return #fff;
@@ -27,21 +27,21 @@ $spaceamounts: (1, 2, 3, 4, 5);
 @each $space in $spaceamounts {
   // All around margin
   .m-#{$space} {
-    margin: #{space}rem;
+    margin: #{$space}rem;
   }
 
   //vertical Margin
   .my-#{$space} {
-    margin: #{space}rem 0;
+    margin: #{$space}rem 0;
   }
 
   // All around Padding
   .p-#{$space} {
-    padding: #{space}rem;
+    padding: #{$space}rem;
   }
 
   //vertical Padding
   .py-#{$space} {
-    padding: #{space}rem 0;
+    padding: #{$space}rem 0;
   }
 }
