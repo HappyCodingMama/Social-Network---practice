@@ -29,4 +29,17 @@
   .my-1 {
     color: lighten($dark-color, 40%);
   }
+
+  input[type='submit'] {
+    font: inherit;
+  }
+
+  .social-input {
+    display: flex;
+
+    i {
+      padding: 0.5rem;
+      width: 4rem;
+    }
+  }
 }
