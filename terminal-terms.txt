@@ -36,3 +36,15 @@ https://github.com/bradtraversy/devconnector_2.0
 [reference]
 express-validator https://express-validator.github.io/docs/
 jsonwebtoken http://jwt.io
+
+
+10.npx create-react-app client
+11. cd client / npm start -> test
+12. npm run dev -> test
+
+
+13.cd client -> npm i axios react-router-dom redux react-redux redux-thunk redux-devtools-extension moment react-moment
+
+14.remove unnessary files -> rm -rf .git
+
+15. npm run dev
