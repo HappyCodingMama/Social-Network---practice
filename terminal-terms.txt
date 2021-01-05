@@ -48,3 +48,6 @@ jsonwebtoken http://jwt.io
 14.remove unnessary files -> rm -rf .git
 
 15. npm run dev
+
+action -> alert.js
+16. cd client -> npm i uuid
