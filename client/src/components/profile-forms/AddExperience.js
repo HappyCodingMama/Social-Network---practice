@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addExperience } from '../../actions/profile';
 
-const AddExperience = (props) => {
+const AddExperience = ({ addExperience, history }) => {
   const [formData, setFormData] = useState({
     company: '',
     title: '',
@@ -15,7 +15,7 @@ const AddExperience = (props) => {
     description: '',
   });
 
-  const [tooDateDisabled, toggleDisabled] = useState(false);
+  const [toDateDisabled, toggleDisabled] = useState(false);
 
   const { company, title, location, from, to, current, description } = formData;
 
@@ -30,7 +30,13 @@ const AddExperience = (props) => {
         positions that you have had in the past
       </p>
       <small>* = required fields</small>
-      <form class='form'>
+      <form
+        class='form'
+        onSubmit={(e) => {
+          e.preventDefault();
+          addExperience(formData, history);
+        }}
+      >
         <div class='form-group'>
           <input
             type='text'
@@ -60,9 +66,7 @@ const AddExperience = (props) => {
             onChange={(e) => onChange(e)}
           />
         </div>
-        <div class='form-group'>
-          <input type='text' placeholder='Location' name='location' />
-        </div>
+
         <div class='form-group'>
           <h4>From Date</h4>
           <input
@@ -94,6 +98,7 @@ const AddExperience = (props) => {
             name='to'
             value={to}
             onChange={(e) => onChange(e)}
+            disabled={toDateDisabled ? 'disabled' : ''}
           />
         </div>
 
@@ -108,7 +113,7 @@ const AddExperience = (props) => {
           ></textarea>
         </div>
 
-        <input type='submit' class='btn btn-primary my-1' />
+        <input type='submit' value='Submit' class='btn btn-primary my-1' />
         <a href='dashboard.html' class='btn btn-primary my-1'>
           Go Back
         </a>
