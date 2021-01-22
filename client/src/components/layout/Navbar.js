@@ -11,6 +11,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         <Link to='/profiles'>Developers</Link>
       </li>
       <li>
+        <Link to='/posts'>Posts</Link>
+      </li>
+      <li>
         <Link to='/dashboard'>
           <i class='fas fa-clipboard-list'></i>{' '}
           <span className='hide-sm'>Dashboard</span>
@@ -30,6 +33,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <li>
         <Link to='/profiles'>Developers</Link>
       </li>
+
       <li>
         <Link to='/register'>Register</Link>
       </li>
