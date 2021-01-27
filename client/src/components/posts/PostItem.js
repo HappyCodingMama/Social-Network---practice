@@ -11,6 +11,7 @@ const PostItem = ({
   deletePost,
   auth,
   post: { _id, text, name, avatar, user, likes, comments, date },
+  showActions,
 }) => {
   return (
     <Fragment>
@@ -26,41 +27,51 @@ const PostItem = ({
           <p className='post-date'>
             Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
           </p>
-          <button
-            onClick={(e) => addLike(_id)}
-            type='button'
-            class='btn btn-primary'
-          >
-            <i class='fas fa-thumbs-up'></i>{' '}
-            <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
-          </button>
-          <button
-            onClick={(e) => removeLike(_id)}
-            type='button'
-            class='btn btn-primary'
-          >
-            <i class='fas fa-thumbs-down'></i>
-          </button>
-          <Link to={`/post/${_id}`} class='btn btn-primary'>
-            {' '}
-            Discussion{' '}
-            {comments.length > 0 && (
-              <span className='comment-count'>{comments.length}</span>
-            )}
-          </Link>
-          {!auth.loading && user === auth.user._id && (
-            <button
-              onClick={(e) => deletePost(_id)}
-              className='btn btn-danger'
-              type='button'
-            >
-              <i className='fas fa-times'></i>
-            </button>
+
+          {showActions && (
+            <Fragment>
+              {' '}
+              <button
+                onClick={(e) => addLike(_id)}
+                type='button'
+                class='btn btn-primary'
+              >
+                <i class='fas fa-thumbs-up'></i>{' '}
+                <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
+              </button>
+              <button
+                onClick={(e) => removeLike(_id)}
+                type='button'
+                class='btn btn-primary'
+              >
+                <i class='fas fa-thumbs-down'></i>
+              </button>
+              <Link to={`/post/${_id}`} class='btn btn-primary'>
+                {' '}
+                Discussion{' '}
+                {comments.length > 0 && (
+                  <span className='comment-count'>{comments.length}</span>
+                )}
+              </Link>
+              {!auth.loading && user === auth.user._id && (
+                <button
+                  onClick={(e) => deletePost(_id)}
+                  className='btn btn-danger'
+                  type='button'
+                >
+                  <i className='fas fa-times'></i>
+                </button>
+              )}
+            </Fragment>
           )}
         </div>
       </div>
     </Fragment>
   );
+};
+
+PostItem.defaultProps = {
+  showActions: true,
 };
 
 PostItem.propTypes = {
