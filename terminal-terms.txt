@@ -51,3 +51,13 @@ jsonwebtoken http://jwt.io
 
 action -> alert.js
 16. cd client -> npm i uuid
+
+
+* deploying at Heroku
+-> Download Heroku CLI
+1. check installation -> heroku -version
+2. heroku login
+3. new file -> config folder -> production.json (contents: copy at default.json)
+4. .gitignore -> add text : config/default.json
+5. at package.json -> add text in "script" : 
+"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
